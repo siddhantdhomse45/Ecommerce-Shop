@@ -1,0 +1,320 @@
+.offers {
+    width: 65%;
+    height: 60vh;
+    display: flex;
+    margin: auto;
+    padding: 0px 140px;
+    margin-bottom: 150px;
+    margin-top: 60px;
+    background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+    position: relative;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.offers-left{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+.offers-left h1{
+    color: #171717;
+    font-size: 50px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #ff6a00, #ffcc00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.offers-left h1::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background-color: #ff6a00;
+    border-radius: 2px;
+    animation: growLine 1s ease forwards;
+}
+
+.offers-left p{
+    color: #171717;
+    font-size: 22px;
+    font-weight: 600;
+    opacity: 0;
+    animation: fadeInText 1s ease forwards 0.5s;
+}
+
+.offers-left button{
+    width: 282px;
+    height: 70px;
+    border-radius: 35px;
+    background: linear-gradient(135deg, #ff4141, #ff6a00);
+    border: none;
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: fadeInText 1s ease forwards 1s;
+}
+
+.offers-left button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 65, 65, 0.5);
+}
+
+.offers-right{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 50px;
+    animation: slideInRight 1s ease-out forwards;
+}
+
+.offers-right img{
+    width: 350px;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.offers-right img:hover {
+    transform: scale(1.05) rotate(-2deg);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* Animations */
+@keyframes slideInLeft {
+    0% { opacity: 0; transform: translateX(-50px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    0% { opacity: 0; transform: translateX(50px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInText {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes growLine {
+    0% { width: 0; }
+    100% { width: 60px; }
+}
+
+/* ---------------- Responsive ---------------- */
+@media(max-width:1280px){
+    .offers{
+        padding: 0px 80px;
+        margin-bottom: 120px;
+    }
+    .offers-left h1{ font-size: 40px; }
+    .offers-left p{ font-size: 18px; }
+    .offers-left button{ width: 220px; height: 50px; font-size: 18px; }
+    .offers-right img{ width: 300px; }
+}
+
+@media(max-width:1024px){
+    .offers{
+        padding: 0px 60px;
+        margin-bottom: 80px;
+        height: auto;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+    .offers-left h1{ font-size: 30px; }
+    .offers-left p{ font-size: 16px; }
+    .offers-left button{ width: 190px; height: 40px; font-size: 16px; margin: 20px auto 0; }
+    .offers-right img{ width: 220px; padding-bottom: 20px; }
+    .offers-right{ justify-content: center; padding-top: 0; }
+}
+
+@media(max-width:768px){
+    .offers-left h1{ font-size: 25px; }
+    .offers-left p{ font-size: 14px; }
+    .offers-left button{ width: 160px; height: 35px; font-size: 14px; }
+    .offers-right img{ width: 180px; }
+}
+
+@media(max-width:500px){
+    .offers-left h1{ font-size: 18px; }
+    .offers-left p{ font-size: 12px; }
+    .offers-left button{ width: 140px; height: 30px; font-size: 12px; }
+    .offers-right img{ width: 120px; }
+}
+/* ---------------- Container ---------------- */
+.offers {
+    width: 70%;
+    max-width: 1400px;
+    min-height: 60vh;
+    display: flex;
+    margin: 80px auto 150px;
+    padding: 40px 60px;
+    background: linear-gradient(135deg, #ffe6f0, #e6fff5);
+    border-radius: 25px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.offers:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+}
+
+/* ---------------- Left Side ---------------- */
+.offers-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+.offers-left h1 {
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 1.1;
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+    position: relative;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.offers-left h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 70px;
+    height: 5px;
+    background: #ff416c;
+    border-radius: 3px;
+    animation: growLine 1s ease forwards;
+}
+
+.offers-left p {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    animation: fadeInUp 1.2s ease forwards;
+}
+
+.offers-left button {
+    width: 260px;
+    height: 60px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.4s ease;
+    animation: fadeInUp 1.4s ease forwards;
+}
+
+.offers-left button:hover {
+    transform: scale(1.05) translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255,65,65,0.4);
+}
+
+/* ---------------- Right Side ---------------- */
+.offers-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    animation: floatImage 3s ease-in-out infinite alternate;
+}
+
+.offers-right img {
+    width: 380px;
+    height: auto;
+    border-radius: 20px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.offers-right img:hover {
+    transform: scale(1.05) rotate(-3deg);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+/* ---------------- Animations ---------------- */
+@keyframes slideInLeft {
+    0% { opacity: 0; transform: translateX(-50px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes growLine {
+    0% { width: 0; }
+    100% { width: 70px; }
+}
+
+@keyframes floatImage {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+
+/* ---------------- Responsive ---------------- */
+@media(max-width:1280px){
+    .offers { padding: 30px 50px; }
+    .offers-left h1 { font-size: 44px; }
+    .offers-left p { font-size: 18px; }
+    .offers-left button { width: 220px; height: 50px; font-size: 18px; }
+    .offers-right img { width: 300px; }
+}
+
+@media(max-width:1024px){
+    .offers { flex-direction: column; text-align: center; padding: 30px; height: auto; }
+    .offers-left h1 { font-size: 36px; }
+    .offers-left p { font-size: 16px; }
+    .offers-left button { margin: 20px auto; width: 180px; height: 45px; font-size: 16px; }
+    .offers-right { justify-content: center; padding-top: 20px; }
+    .offers-right img { width: 250px; }
+}
+
+@media(max-width:768px){
+    .offers-left h1 { font-size: 28px; }
+    .offers-left p { font-size: 14px; }
+    .offers-left button { width: 160px; height: 40px; font-size: 14px; }
+    .offers-right img { width: 200px; }
+}
+
+@media(max-width:500px){
+    .offers-left h1 { font-size: 22px; }
+    .offers-left p { font-size: 12px; }
+    .offers-left button { width: 140px; height: 35px; font-size: 12px; }
+    .offers-right img { width: 150px; }
+}

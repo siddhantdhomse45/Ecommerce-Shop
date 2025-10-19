@@ -1,0 +1,154 @@
+/* Container */
+.todayoffer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 20px;
+  background: #fff8f5; /* Soft background */
+  min-height: 90vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Heading */
+.todayoffer h1.offer-heading {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  color: #ff4c29; /* Eye-catching orange */
+  font-size: 52px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.todayoffer hr {
+  width: 220px;
+  height: 8px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #ff6a00, #ffcc00);
+  border: none;
+  margin-top: 10px;
+}
+
+/* Countdown Timer */
+.countdown-timer {
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 10px 18px;
+  border-radius: 30px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  animation: pulse 1.8s infinite;
+  letter-spacing: 0.5px;
+  margin-left: 20px;
+  white-space: nowrap;
+  transition: transform 0.3s;
+}
+
+.countdown-timer:hover {
+  transform: scale(1.05);
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.9; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Marquee / Scrolling Offer Items */
+.marquee-container {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 50px;
+  position: relative;
+}
+
+.marquee-container.active .marquee-content {
+  animation: scroll-left 20s linear infinite;
+}
+
+.marquee-content {
+  display: flex;
+  gap: 30px;
+  width: fit-content;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Offer Items Text */
+.offer-items .item p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #3d3d3d;
+  text-align: center;
+  margin-top: 8px;
+  text-transform: capitalize;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.offer-items .item .price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ff4141;
+}
+
+/* Hover effect for item text */
+.offer-items .item:hover p {
+  color: #ff6a00;
+  transition: color 0.3s ease;
+}
+
+/* Individual Item Hover Animation */
+.offer-items .item {
+  transition: transform 0.4s, box-shadow 0.4s;
+  cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.offer-items .item:hover {
+  transform: scale(1.08) translateY(-5px);
+  box-shadow: 0 20px 35px rgba(0,0,0,0.25);
+}
+
+.offer-items .item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+.offer-items .item:hover img {
+  transform: scale(1.1);
+}
+
+/* Responsive Text */
+@media(max-width:1280px){
+  .todayoffer h1.offer-heading { font-size: 44px; }
+  .countdown-timer { font-size: 1rem; padding: 8px 16px; }
+}
+
+@media(max-width:1024px){
+  .todayoffer h1.offer-heading { font-size: 38px; text-align: center; }
+  .countdown-timer { margin-left: 10px; font-size: 0.95rem; }
+}
+
+@media(max-width:800px){
+  .todayoffer h1.offer-heading { font-size: 30px; }
+  .countdown-timer { font-size: 0.85rem; padding: 6px 14px; }
+}
+
+@media(max-width:500px){
+  .todayoffer h1.offer-heading { font-size: 22px; }
+  .countdown-timer { font-size: 0.75rem; padding: 5px 12px; }
+}

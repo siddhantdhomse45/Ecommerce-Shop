@@ -1,0 +1,256 @@
+/* ---------------------- Checkout Container ---------------------- */
+.checkout-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ---------------------- Step Section ---------------------- */
+.step-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.step {
+  font-weight: 600;
+  font-size: 18px;
+  padding: 10px 15px;
+  background: #f4f4f4;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.step.active {
+  background: #ffe6b3;
+  border-left: 5px solid #ff9900;
+}
+
+.change-btn {
+  background: #ff9900;
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.change-btn:hover {
+  background: #e68a00;
+}
+
+/* ---------------------- Address Section ---------------------- */
+.section {
+  margin-top: 20px;
+}
+
+.address-box {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.address-box.selected {
+  border-color: #ff9900;
+  background: #fff4e6;
+}
+
+.address-box h4 {
+  margin: 0 0 5px 0;
+}
+
+.btn2 {
+  background: #ff9900;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.btn2:hover {
+  background: #e68a00;
+}
+
+.new-address-form {
+  margin-top: 20px;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+.new-address-form h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.form-grid input,
+.form-grid textarea,
+.form-grid select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  font-size: 14px;
+}
+
+.location-btn {
+  background: #007bff;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.location-btn:hover {
+  background: #0062cc;
+}
+
+.btn1 {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.btn1:hover {
+  background: #218838;
+}
+
+.cancel-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cancel-btn:hover {
+  background: #c82333;
+}
+
+/* ---------------------- Payment Section ---------------------- */
+.payment-method-section {
+  margin-top: 20px;
+}
+
+.payment-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid #ccc;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.payment-btn img {
+  width: 40px;
+  height: 40px;
+}
+
+.payment-btn.selected {
+  border-color: #ff9900;
+  background: #fff4e6;
+}
+
+.upi-section {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.amount-display {
+  font-weight: 600;
+  color: #333;
+}
+
+/* ---------------------- COD Popup ---------------------- */
+.cod-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.cod-popup {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.cod-popup button {
+  margin-top: 15px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cod-popup button.close-popup {
+  background: #dc3545;
+  color: white;
+  margin-left: 10px;
+}
+
+.cod-popup button:hover {
+  opacity: 0.9;
+}
+
+/* ---------------------- Responsive ---------------------- */
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-container {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .payment-btn {
+    justify-content: flex-start;
+  }
+}

@@ -1,0 +1,201 @@
+/* ---------------- Footer Container ---------------- */
+.footer {
+    background: linear-gradient(180deg, #ADD8E6, #FFD580);
+    padding: 60px 100px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    position: relative;
+    overflow: hidden;
+    border-top: 5px solid #ff6a00;
+}
+
+/* ---------------- Footer Logo ---------------- */
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.footer-logo img {
+    width: 130px;
+    opacity: 0.9;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.footer-logo img:hover {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.footer-logo p {
+    font-size: 36px;
+    font-weight: bold;
+    color: #3e3b3b;
+    text-align: center;
+}
+
+/* ---------------- Footer Links ---------------- */
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0 40px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-links li {
+    margin: 0;
+    padding: 0;
+    flex: 1 1 180px;
+}
+
+.footer-links h3,
+.footer-links h4 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.footer-links h3::after,
+.footer-links h4::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: #ff416c;
+    border-radius: 2px;
+    animation: growLine 1s ease forwards;
+}
+
+.footer-links p,
+.footer-links a {
+    margin: 6px 0;
+    font-size: 14px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-links p:hover {
+    color: #ff416c;
+    transform: translateX(3px);
+}
+
+/* ---------------- Social Icons ---------------- */
+.footer-social-icon {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.footer-icons-container img {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer-icons-container img:hover {
+    transform: scale(1.2) rotate(-10deg);
+    filter: drop-shadow(0 4px 6px rgba(255, 65, 65, 0.5));
+}
+
+/* ---------------- Copyright ---------------- */
+.footer-copyright {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 14px;
+    color: #3e3b3b;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.footer-copyright hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+/* ---------------- Animations ---------------- */
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes growLine {
+    0% { width: 0; }
+    100% { width: 50px; }
+}
+
+/* ---------------- Scroll to Top Icon ---------------- */
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    font-size: 36px;
+    color: #ff416c;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 100;
+}
+
+.scroll-top:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 1024px){
+    .footer {
+        padding: 50px 40px;
+    }
+    .footer-links {
+        gap: 15px;
+        margin: 0 20px;
+    }
+}
+
+@media (max-width: 768px){
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-links li {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px){
+    .footer {
+        padding: 40px 20px;
+    }
+    .footer-logo img {
+        width: 100px;
+    }
+    .footer-logo p {
+        font-size: 28px;
+    }
+    .footer-links h3,
+    .footer-links h4 {
+        font-size: 16px;
+    }
+    .footer-links p,
+    .footer-links a {
+        font-size: 12px;
+    }
+    .footer-icons-container img {
+        width: 24px;
+        height: 24px;
+    }
+    .footer-copyright {
+        font-size: 12px;
+    }
+}
