@@ -20,6 +20,7 @@ import Orders from './Pages/Orders';
 // ✅ Toastify import
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ChatPopup from './Components/ChatPopup/ChatPopup';
 
 function App() {
   const [showButton, setShowButton] = useState(false);
@@ -83,6 +84,7 @@ function App() {
 
       {/* Back to Top Button */}
       <ScrollToTop />
+      <ChatPopup/>
     </div>
   );
 }
